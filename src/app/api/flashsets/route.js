@@ -19,7 +19,27 @@ import Bookmark from '~/models/Bookmark'
 
 export async function GET(req, res) {
   try {
-    const token = await getToken({ req })
+    // const token = await getToken({ req })
+    const token = {
+      name: 'Thái Bảo',
+      email: 'thaibaovo2kdev@gmail.com',
+      sub: 'RZWPVRMW',
+      _id: '657033427d36afb4e3b41818',
+      avatar: 'https://ui-avatars.com/api/?background=random&name=thaibaovo2kdev&format=jpg',
+      username: 'thaibaovo2kdev',
+      phone: null,
+      talksamId: 'thaibaovo2kdev',
+      birthday: null,
+      type: 'student',
+      role: null,
+      status: 'active',
+      id: 'RZWPVRMW',
+      createdAt: '2023-12-06T08:39:30.872Z',
+      updatedAt: '2023-12-06T08:39:30.872Z',
+      iat: 1705473591,
+      exp: 1708065591,
+      jti: '3f05c6ed-7e76-4e6a-9e68-856979b15e0a'
+    }
     await connectDB()
     const page = parseInt(req.nextUrl.searchParams.get('page') || '1', 10)
     const perPage = parseInt(
@@ -102,7 +122,27 @@ export async function GET(req, res) {
 export async function POST(req, res) {
   try {
     await connectDB()
-    const token = await getToken({ req })
+    // const token = await getToken({ req })
+    const token = {
+      name: 'Thái Bảo',
+      email: 'thaibaovo2kdev@gmail.com',
+      sub: 'RZWPVRMW',
+      _id: '657033427d36afb4e3b41818',
+      avatar: 'https://ui-avatars.com/api/?background=random&name=thaibaovo2kdev&format=jpg',
+      username: 'thaibaovo2kdev',
+      phone: null,
+      talksamId: 'thaibaovo2kdev',
+      birthday: null,
+      type: 'student',
+      role: null,
+      status: 'active',
+      id: 'RZWPVRMW',
+      createdAt: '2023-12-06T08:39:30.872Z',
+      updatedAt: '2023-12-06T08:39:30.872Z',
+      iat: 1705473591,
+      exp: 1708065591,
+      jti: '3f05c6ed-7e76-4e6a-9e68-856979b15e0a'
+    }
     const body = await req.json()
 
     const course = await FlashSet.create({ ...body, creator: token.id })

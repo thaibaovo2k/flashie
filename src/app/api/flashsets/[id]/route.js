@@ -30,7 +30,28 @@ import CourseQuiz from '~/models/CourseQuiz'
 export async function GET(req, res) {
   try {
     await connectDB()
-    const token = await getToken({ req })
+    // const token = await getToken({ req })
+    const token = {
+      name: 'Thái Bảo',
+      email: 'thaibaovo2kdev@gmail.com',
+      sub: 'RZWPVRMW',
+      _id: '657033427d36afb4e3b41818',
+      avatar: 'https://ui-avatars.com/api/?background=random&name=thaibaovo2kdev&format=jpg',
+      username: 'thaibaovo2kdev',
+      phone: null,
+      talksamId: 'thaibaovo2kdev',
+      birthday: null,
+      type: 'student',
+      role: null,
+      status: 'active',
+      id: 'RZWPVRMW',
+      createdAt: '2023-12-06T08:39:30.872Z',
+      updatedAt: '2023-12-06T08:39:30.872Z',
+      iat: 1705473591,
+      exp: 1708065591,
+      jti: '3f05c6ed-7e76-4e6a-9e68-856979b15e0a'
+    }
+
     const { id } = res.params
     const flashset = await FlashSet.findOne({ id }).lean()
 
