@@ -27,7 +27,7 @@ export default function PageLayout({
 
   return (
     <>
-      <Navbar menu={menu} sidebars={sidebars} toggleMenu={toggleMenu} />
+      {/* <Navbar menu={menu} sidebars={sidebars} toggleMenu={toggleMenu} /> */}
       <div className='flex w-full max-w-5xl flex-col self-center px-4'>
         {!hideNavigator && (
           <div className='relative my-4 flex flex-row'>
